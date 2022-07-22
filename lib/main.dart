@@ -85,11 +85,10 @@ class _MyHomePageState extends State<MyHomePage> {
                margin: EdgeInsets.only(left: 25,right: 25),
                decoration: BoxDecoration(
                    border: Border(
-                       bottom: BorderSide(width: 3,color: Colors.black26),
-                       top: BorderSide(width: 3,color: Colors.black26),
+                       bottom: BorderSide(width: 3,color: Colors.black),
+                       top: BorderSide(width: 3,color: Colors.black),
                    )),
                child: Row(
-                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                  children: [
                    Column(
                      children: [
@@ -99,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
                        ),
                        Text("-HTML5",style: table_text_styling,),
                        Text("-CSS(basics)",style: table_text_styling,),
-                       Text("-Flutter for Web",style: table_text_styling,)],),
+                       Text("-Flutter for Web",style: table_text_styling,)]),
 
                    Column(
                      children: [
@@ -135,11 +134,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
            Padding(
-             padding: const EdgeInsets.only(top: 25,bottom: 20),
+             padding: const EdgeInsets.only(top: 25,bottom: 20,left: 25,right: 25),
              child: Text("MY PROJECTS",style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 32)),),
            ),
            Padding(
-             padding: const EdgeInsets.only(bottom: 20),
+             padding: const EdgeInsets.only(bottom: 20,left: 25,right: 25),
              child: Text("Here are some of my Projects I've build.\n"
                  "Note: Some projects are older and might not be (fully) online. "
                  "But I can provide some more Information or a Demo if you want.", style: GoogleFonts.cutive(),),
@@ -148,25 +147,51 @@ class _MyHomePageState extends State<MyHomePage> {
            
            Container(
              height: 200,
+             padding: EdgeInsets.only(top: 25,left: 5,right: 5),
+             margin: EdgeInsets.only(left: 25,right: 25),
              decoration: BoxDecoration(
                //color: Colors.black26,
-               border: Border(top: BorderSide(width: 3,color: Colors.black26),bottom: BorderSide(width: 3,color: Colors.black26))
+
+               border: Border(
+                   top: BorderSide(width: 3,color: Colors.black),
+                   bottom: BorderSide(width: 3,color: Colors.black))
              ),
              child: Row(
                children: [
                  Column(
                    children: [
-                     Text("Ticketing system"),
-                     Text("Description of ticketing system"),
-                     Text("link to more details")
-                   ],
+                     Padding(
+                       padding: const EdgeInsets.only(bottom: 3,left: 0),
+                       child: Text("Ticketing system",style: table_text_styling1,textAlign: TextAlign.start,),
+                     ),
+                     Text("Easy QR Code based ticketing system for events, that creates the invited based on a guest list.",style: project_text),
+                     InkWell(
+                       onTap: (){
+
+                       },
+                       child: Text("link to more details",
+                           style: GoogleFonts.cutive(
+                               fontSize: 12,
+                               color: Colors.black,
+                               decoration: TextDecoration.underline)),
+                     )
+                   ],mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.start,
                  ),
                  Container(width: 100,height: 100,color: Colors.black26)
                ],
              ),),
+
            Container(
              height: 200,
-             color: Colors.black12,
+             padding: EdgeInsets.only(top: 25,left: 5,right: 5),
+             margin: EdgeInsets.only(left: 25,right: 25),
+             decoration: BoxDecoration(
+               //color: Colors.black26,
+
+                 border: Border(
+                     top: BorderSide(width: 0,color: Colors.black),
+                     bottom: BorderSide(width: 0,color: Colors.black))
+             ),
              child: Row(
                children: [
                  Container(
@@ -174,45 +199,165 @@ class _MyHomePageState extends State<MyHomePage> {
                    height: 200,
                    color: Colors.black26,
                  ),
-                 Column(
+                 Column(crossAxisAlignment: CrossAxisAlignment.start,
                    children: [
-                     Text("Abode"),
-                     Text("Browse Property listings by simply swiping through them!!"),
-                     Text("links to app store"),
-                     Text("hint: servers may have some downtime")
+                     Text("Abode",style: table_text_styling1,),
+                     Text("Browse Property listings by simply swiping through them!!",style: project_text,),
+                     InkWell(
+                       onTap: (){
+
+                       },
+                       child: Text("link to more details",
+                           style: GoogleFonts.cutive(
+                               fontSize: 12,
+                               color: Colors.black,
+                               decoration: TextDecoration.underline)),
+                     ),
+                     Spacer(),
+
+                     Text("hint: servers may have some downtime",style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 12)),)
                    ],
                  ),
                ],
              ) ,),
            Container(
-             height: 200,
-             color: Colors.black12,
+             height: 400,
+             padding: EdgeInsets.only(top: 25,left: 5,right: 5),
+             margin: EdgeInsets.only(left: 25,right: 25),
+             decoration: BoxDecoration(
+               //color: Colors.black26,
+
+                 border: Border(
+                     top: BorderSide(width: 3,color: Colors.black),
+                     bottom: BorderSide(width: 3,color: Colors.black))
+             ),
              child: Row(
+               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                children: [
                  Column(
                    children: [
-                     Text("Ai Art"),
-                     Text("Description"),
+                     Text("AI Art School Project",style: table_text_styling1,),
+                     Text("Description",style: project_text,),
+                     InkWell(
+                       onTap: (){
+
+                       },
+                       child: Text("link to more details",
+                           style: GoogleFonts.cutive(
+                               fontSize: 12,
+                               color: Colors.black,
+                               decoration: TextDecoration.underline)),
+                     ),
+                     Container(width: 200,height: 200,color: Colors.black26,)
                    ],
                  ),
-                 Container(width: 200,height: 200,color: Colors.black26,)
-               ],
-             ) ,),
-           Container(
-             height: 200,
-             color: Colors.black12,
-             child: Row(
-               children: [
-                 Container(width: 200,height: 200,color: Colors.black26,),
+                 Container(
+                   width: 3,
+                   color: Colors.black,
+                   //padding: EdgeInsets.only(bottom: 25),
+                   margin: EdgeInsets.only(bottom: 25),
+                 ),
                  Column(
                    children: [
-                     Text("Substitute table viewer"),
-                     Text("Description short"),
-                     Text("link to tech details"),
+                     Text("Dataset-creator",style: table_text_styling1,),
+                     Text("Description",style: project_text,),
+                     InkWell(
+                       onTap: (){
+
+                       },
+                       child: Text("link to more details",
+                           style: GoogleFonts.cutive(
+                               fontSize: 12,
+                               color: Colors.black,
+                               decoration: TextDecoration.underline)),
+                     ),
+                     Container(width: 200,height: 200,color: Colors.black26,)
+                   ],
+                 ),
+                 //Container(width: 200,height: 200,color: Colors.black26,)
+               ],
+             ) ,),
+
+           Container(
+             height: 200,
+             padding: EdgeInsets.only(top: 25,left: 5,right: 5),
+             margin: EdgeInsets.only(left: 25,right: 25,bottom: 25),
+             decoration: BoxDecoration(
+                 border: Border(
+                     top: BorderSide(width: 0,color: Colors.black),
+                     bottom: BorderSide(width: 3,color: Colors.black))
+             ),
+             child: Row(
+               children: [
+                 Container(
+                   width: 200,
+                   height: 200,
+                   color: Colors.black,
+                   margin: EdgeInsets.all(5),),
+
+                 Column(
+                   crossAxisAlignment: CrossAxisAlignment.start,
+                   children: [
+                     Text("Substitute table viewer",style: table_text_styling1,),
+                     Text("Description short",style: project_text,),
+                     InkWell(
+                       onTap: (){
+
+                       },
+                       child: Text("link to more details",
+                           style: GoogleFonts.cutive(
+                               fontSize: 12,
+                               color: Colors.black,
+                               decoration: TextDecoration.underline)),
+                     ),
                    ],)
                ],
              ),),
-           Text("Get in Touch")
+           Center(
+               child: Text(
+                 "Get in Touch",
+                 style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 32)),)),
+           Column(
+             children: [
+               Padding(
+                 padding: const EdgeInsets.all(20),
+                 child: Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                   children: [
+                      InkWell(
+                        onTap: (){},
+                        child:
+                        Container(
+                          width: 100,
+                          height: 25,
+                          color: Colors.black,
+                          child: Center(child: Text("Twitter",style: GoogleFonts.cutive(textStyle: TextStyle(color: Colors.white)),)),),
+                      ),
+                     InkWell(
+                       onTap: (){},
+                       child:
+                       Container(
+                         width: 100,
+                         height: 25,
+                         color: Colors.black,
+                         child: Center(child: Text("Twitter",style: GoogleFonts.cutive(textStyle: TextStyle(color: Colors.white)),)),),
+                     ),
+                     InkWell(
+                       onTap: (){},
+                       child:
+                       Container(
+                         width: 100,
+                         height: 25,
+                         color: Colors.black,
+                         child: Center(child: Text("Twitter",style: GoogleFonts.cutive(textStyle: TextStyle(color: Colors.white)),)),),
+                     ),
+                   ],
+                 ),
+               ),
+               Text("or write me an email:\ndevelopedbymarc@gmail.com",style: GoogleFonts.cutive(),),
+             ],
+           ),
+           SizedBox(height: 200,)
          ],
        ),
 
