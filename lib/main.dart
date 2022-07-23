@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'utilities.dart';
+import 'ticketing_view.dart';
 
 void main() {
   runApp(MyApp());
@@ -146,7 +148,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
            
            Container(
-             height: 200,
+             height: 250,
              padding: EdgeInsets.only(top: 25,left: 5,right: 5),
              margin: EdgeInsets.only(left: 25,right: 25),
              decoration: BoxDecoration(
@@ -167,7 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
                      Text("Easy QR Code based ticketing system for events, that creates the invited based on a guest list.",style: project_text),
                      InkWell(
                        onTap: (){
-
+                         Navigator.push(context, MaterialPageRoute(builder: (context)=>ticketng_advanced()));
                        },
                        child: Text("link to more details",
                            style: GoogleFonts.cutive(
@@ -177,12 +179,21 @@ class _MyHomePageState extends State<MyHomePage> {
                      )
                    ],mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.start,
                  ),
-                 Container(width: 100,height: 100,color: Colors.black26)
+                 Container(
+                     width: 200,
+                     height: 200,
+                     margin: EdgeInsets.all(15),
+                     decoration:
+                     BoxDecoration(
+                         image: DecorationImage(
+                             fit: BoxFit.cover,
+                             image: AssetImage("5.jpg"))),
+                     )
                ],
              ),),
 
            Container(
-             height: 200,
+             height: 250,
              padding: EdgeInsets.only(top: 25,left: 5,right: 5),
              margin: EdgeInsets.only(left: 25,right: 25),
              decoration: BoxDecoration(
@@ -197,7 +208,12 @@ class _MyHomePageState extends State<MyHomePage> {
                  Container(
                    width: 200,
                    height: 200,
-                   color: Colors.black26,
+                   margin: EdgeInsets.all(15),
+                   decoration:
+                   BoxDecoration(
+                       image: DecorationImage(
+                           fit: BoxFit.cover,
+                           image: AssetImage("AppIcon.png"))),
                  ),
                  Column(crossAxisAlignment: CrossAxisAlignment.start,
                    children: [
@@ -205,9 +221,10 @@ class _MyHomePageState extends State<MyHomePage> {
                      Text("Browse Property listings by simply swiping through them!!",style: project_text,),
                      InkWell(
                        onTap: (){
-
+                         launch("https://apps.apple.com/de/app/abode/id1577839586");
+                        
                        },
-                       child: Text("link to more details",
+                       child: Text("link to AppSotre",
                            style: GoogleFonts.cutive(
                                fontSize: 12,
                                color: Colors.black,
@@ -237,7 +254,7 @@ class _MyHomePageState extends State<MyHomePage> {
                  Column(
                    children: [
                      Text("AI Art School Project",style: table_text_styling1,),
-                     Text("Description",style: project_text,),
+                     Text("An Ai Art Projects that allows you to upload a selfie and be in a historic artwork with other users",style: project_text,),
                      InkWell(
                        onTap: (){
 
@@ -248,7 +265,16 @@ class _MyHomePageState extends State<MyHomePage> {
                                color: Colors.black,
                                decoration: TextDecoration.underline)),
                      ),
-                     Container(width: 200,height: 200,color: Colors.black26,)
+                     Container(
+                       width: 200,
+                       height: 200,
+                       margin: EdgeInsets.all(15),
+                       decoration:
+                       BoxDecoration(
+                           image: DecorationImage(
+                               fit: BoxFit.cover,
+                               image: AssetImage("latest.png"))),
+                     )
                    ],
                  ),
                  Container(
@@ -260,7 +286,7 @@ class _MyHomePageState extends State<MyHomePage> {
                  Column(
                    children: [
                      Text("Dataset-creator",style: table_text_styling1,),
-                     Text("Description",style: project_text,),
+                     Text("Create Image Bases Datasets on your phone.\nMade for highly specific use cases. The finished Dataset can then be loaded directly into pytorch",style: project_text,),
                      InkWell(
                        onTap: (){
 
@@ -271,7 +297,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                color: Colors.black,
                                decoration: TextDecoration.underline)),
                      ),
-                     Container(width: 200,height: 200,color: Colors.black26,)
+                     Container(
+                       width: 200,
+                       height: 200,
+                       decoration:
+                       BoxDecoration(
+                           image: DecorationImage(
+                               fit: BoxFit.cover,
+                               image: AssetImage("2.jpg"))),
+                     )
                    ],
                  ),
                  //Container(width: 200,height: 200,color: Colors.black26,)
@@ -279,7 +313,7 @@ class _MyHomePageState extends State<MyHomePage> {
              ) ,),
 
            Container(
-             height: 200,
+             height: 250,
              padding: EdgeInsets.only(top: 25,left: 5,right: 5),
              margin: EdgeInsets.only(left: 25,right: 25,bottom: 25),
              decoration: BoxDecoration(
@@ -292,14 +326,19 @@ class _MyHomePageState extends State<MyHomePage> {
                  Container(
                    width: 200,
                    height: 200,
-                   color: Colors.black,
-                   margin: EdgeInsets.all(5),),
+                   margin: EdgeInsets.all(15),
+                   decoration:
+                   BoxDecoration(
+                       image: DecorationImage(
+                           fit: BoxFit.cover,
+                           image: AssetImage("4.jpg"))),
+                 ),
 
                  Column(
                    crossAxisAlignment: CrossAxisAlignment.start,
                    children: [
                      Text("Substitute table viewer",style: table_text_styling1,),
-                     Text("Description short",style: project_text,),
+                     Text("A simple, lightweight and fast viewer for my shools substitude table, that automatically loggs you in and selects your course/year.",style: project_text,),
                      InkWell(
                        onTap: (){
 
@@ -325,7 +364,9 @@ class _MyHomePageState extends State<MyHomePage> {
                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                    children: [
                       InkWell(
-                        onTap: (){},
+                        onTap: (){
+                          launch("https://www.twitter.com/mfdobner");
+                        },
                         child:
                         Container(
                           width: 100,
@@ -334,22 +375,26 @@ class _MyHomePageState extends State<MyHomePage> {
                           child: Center(child: Text("Twitter",style: GoogleFonts.cutive(textStyle: TextStyle(color: Colors.white)),)),),
                       ),
                      InkWell(
-                       onTap: (){},
+                       onTap: (){
+                         launch("https://www.instagram.com/mfdobi");
+                       },
                        child:
                        Container(
                          width: 100,
                          height: 25,
                          color: Colors.black,
-                         child: Center(child: Text("Twitter",style: GoogleFonts.cutive(textStyle: TextStyle(color: Colors.white)),)),),
+                         child: Center(child: Text("Instagram",style: GoogleFonts.cutive(textStyle: TextStyle(color: Colors.white)),)),),
                      ),
                      InkWell(
-                       onTap: (){},
+                       onTap: (){
+                         launch("https://www.linkedin.com/in/marc-dobner");
+                       },
                        child:
                        Container(
                          width: 100,
                          height: 25,
                          color: Colors.black,
-                         child: Center(child: Text("Twitter",style: GoogleFonts.cutive(textStyle: TextStyle(color: Colors.white)),)),),
+                         child: Center(child: Text("LinkedIn",style: GoogleFonts.cutive(textStyle: TextStyle(color: Colors.white)),)),),
                      ),
                    ],
                  ),
