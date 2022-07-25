@@ -70,15 +70,17 @@ class ticketing extends StatelessWidget {
               ],mainAxisAlignment: MainAxisAlignment.start,crossAxisAlignment: CrossAxisAlignment.start,
             ),
           ),
-          Container(
-            width: 200,
-            height: 200,
-            margin: EdgeInsets.all(15),
-            decoration:
-            BoxDecoration(
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage("5.jpg"))),
+          Flexible(
+            child: Container(
+              width: 200,
+              height: 200,
+              margin: EdgeInsets.all(15),
+              decoration:
+              BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage("5.jpg"))),
+            ),
           )
         ],
       ),);
@@ -103,22 +105,24 @@ class substitude extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Container(
-            width: 200,
-            height: 200,
-            margin: EdgeInsets.all(15),
-            decoration:
-            BoxDecoration(
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage("4.jpg"))),
+          Flexible(
+            child: Container(
+              width: 200,
+              height: 200,
+              margin: EdgeInsets.all(15),
+              decoration:
+              BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage("4.jpg"))),
+            ),
           ),
 
           Flexible(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Substitute table viewer",style: table_text_styling1,),
+                Text("Schedule Viewer",style: table_text_styling1,),
                 Text("A simple, lightweight and fast viewer for my shools substitude table, that automatically loggs you in and selects your course/year.",style: project_text,),
                 InkWell(
                   onTap: (){
@@ -157,15 +161,17 @@ class Abode extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Container(
-            width: 200,
-            height: 200,
-            margin: EdgeInsets.all(15),
-            decoration:
-            BoxDecoration(
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage("AppIcon.png"))),
+          Flexible(
+            child: Container(
+              width: 200,
+              height: 200,
+              margin: EdgeInsets.all(15),
+              decoration:
+              BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: AssetImage("AppIcon.png"))),
+            ),
           ),
           Flexible(
             child: Column(crossAxisAlignment: CrossAxisAlignment.start,

@@ -21,29 +21,15 @@ class mobile_layout extends StatelessWidget {
     return ListView(
       children: [
         //horizontal_phone(),
-        Row(
-          children: [
-            Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.10),
-                  child: vertical_phone(),
-                ),
-                SizedBox(
-                  height: 50,
-                )
-              ],
-            ),
-            Spacer(),
-            Column(
-              children: [
-                SizedBox(height: 350,),
-                terminal(),
-              ],
-            ),
-            Spacer()
-          ],
+
+       UnconstrainedBox(
+         child: vertical_phone(),
+       ),
+        SizedBox(
+          height: 25,
         ),
+
+        terminal(),
         SizedBox(height: 50,),
 
         Center(child: Text("SKILLS",style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 32)),)),

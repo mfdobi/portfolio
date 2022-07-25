@@ -37,7 +37,7 @@ class desktop_layout extends StatelessWidget {
             Column(
               children: [
                 SizedBox(height: 350,),
-                terminal(),
+                terminal()
               ],
             ),
             Spacer()

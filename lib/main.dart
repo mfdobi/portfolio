@@ -52,7 +52,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
        body: LayoutBuilder(
          builder: (context, constraints){
-           if (constraints.maxWidth >600){
+           if (constraints.maxWidth >650){
              return desktop_layout();
            }else{
              return mobile_layout();

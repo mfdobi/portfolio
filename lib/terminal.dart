@@ -4,8 +4,6 @@ import 'package:url_launcher/url_launcher.dart';
 import 'utilities.dart';
 import 'ticketing_view.dart';
 
-
-
 class terminal extends StatelessWidget {
   const terminal({
     Key? key,
@@ -58,7 +56,7 @@ class terminal extends StatelessWidget {
           ),
           Container(
             height:225 ,
-            width: MediaQuery.of(context).size.width*0.5,
+            //width: MediaQuery.of(context).size.width*0.5,
             color: Colors.black45,
             child: Padding(
               padding: const EdgeInsets.only(top: 5,left: 2,right: 2),
