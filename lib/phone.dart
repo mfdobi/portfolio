@@ -46,9 +46,30 @@ class vertical_phone extends StatelessWidget {
                     ))],),),
           Expanded(
               child: Container(
+                width: 250,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(bottomLeft: Radius.circular(33),bottomRight: Radius.circular(33)),
-                    color: Colors.black),))
+                    color: Colors.black),
+              child:Row(
+                children: [
+                  Spacer(),
+                  InkWell(
+                    onTap: (){
+                      
+                    },
+                    child: Container(
+                      width: 31,
+                      height: 31,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.grey,width: 3),
+                        color: Colors.black
+                      ),
+                    ),
+                  ),
+                  Spacer()
+                ],
+              )))
         ],
       ),
     );

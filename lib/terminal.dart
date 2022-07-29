@@ -3,6 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'utilities.dart';
 import 'ticketing_view.dart';
+import 'terminal_big.dart';
+import 'package:transition/transition.dart';
+
 
 class terminal extends StatelessWidget {
   const terminal({
@@ -44,12 +47,18 @@ class terminal extends StatelessWidget {
 
                 Padding(
                   padding: const EdgeInsets.only(right: 5,bottom: 5,top: 5),
-                  child: Container(
-                    width: 25,
-                    height: 25,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.lightGreen),),
+                  child: InkWell(
+                    onTap: (){
+                      //Navigator.of(context).push(MaterialPageRoute(builder: (context)=> terminal_big_()));
+                      Navigator.push(context, Transition(child: terminal_big_(),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
+                    },
+                    child: Container(
+                      width: 25,
+                      height: 25,
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.lightGreen),),
+                  ),
                 ),
               ],
             ),
