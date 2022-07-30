@@ -47,7 +47,8 @@ class _ticketng_advancedState extends State<ticketng_advanced> {
                 textStyle: TextStyle(
                     color: Colors.black,
                     fontSize: 32,
-                    fontWeight: FontWeight.bold)),),
+                    fontWeight: FontWeight.
+                )),),
           onPressed: (){
             Navigator.push(context, Transition(child: MyHomePage(),transitionEffect: TransitionEffect.FADE ));
           },),

@@ -18,6 +18,9 @@ class get_in_touch extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+
+              Social_inkwell(title: "Twitter", link: "https://www.twitter.com/mfdobner", image: "twitter.png"),
+              /*
               InkWell(
                 onTap: (){
                   launch("https://www.twitter.com/mfdobner");
@@ -28,34 +31,58 @@ class get_in_touch extends StatelessWidget {
                   height: 25,
                   color: Colors.black,
                   child: Center(child: Text("Twitter",style: GoogleFonts.cutive(textStyle: TextStyle(color: Colors.white)),)),),
-              ),
-              InkWell(
-                onTap: (){
-                  launch("https://www.instagram.com/mfdobi");
-                },
-                child:
-                Container(
-                  width: 100,
-                  height: 25,
-                  color: Colors.black,
-                  child: Center(child: Text("Instagram",style: GoogleFonts.cutive(textStyle: TextStyle(color: Colors.white)),)),),
-              ),
-              InkWell(
-                onTap: (){
-                  launch("https://www.linkedin.com/in/marc-dobner");
-                },
-                child:
-                Container(
-                  width: 100,
-                  height: 25,
-                  color: Colors.black,
-                  child: Center(child: Text("LinkedIn",style: GoogleFonts.cutive(textStyle: TextStyle(color: Colors.white)),)),),
-              ),
+              ),*/
+              Social_inkwell(title: "Instagram", link: "https://www.instagram.com/mfdobi", image: "Instagram.png"),
+
+
+              Social_inkwell(title: "LinkedIn",link: "https://www.linkedin.com/in/marc-dobner",image: "linkedin.png",),
             ],
           ),
         ),
         Text("or write me an email:\ndevelopedbymarc@gmail.com",style: GoogleFonts.cutive(),),
       ],
+    );
+  }
+}
+
+class Social_inkwell extends StatelessWidget {
+  final String title;
+  final String link;
+  final String image;
+
+  const Social_inkwell({
+    Key? key,
+    required this.title,
+    required this.link,
+    required this.image
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: ()async{
+        showDialog(
+            context: context,
+            builder: (context){
+              return AlertDialog(
+                title: Center(child: Text("open on your phone",style: table_text_styling1,)),
+                content: Container(
+                  child: Image.asset(image),
+                ),
+                backgroundColor: Color.fromRGBO(238, 235, 224, 1),
+
+              );
+            });
+        await Future.delayed(Duration(seconds: 3));
+        launch(link);
+
+      },
+      child:
+      Container(
+        width: 100,
+        height: 25,
+        color: Colors.black,
+        child: Center(child: Text("${title}",style: GoogleFonts.cutive(textStyle: TextStyle(color: Colors.white)),)),),
     );
   }
 }
