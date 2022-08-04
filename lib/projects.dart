@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:transition/transition.dart';
 import 'utilities.dart';
 import 'ticketing_view.dart';
+import 'Ai_project.dart';
+import 'dataset_creator.dart';
 
 
 class projects extends StatelessWidget {
@@ -59,7 +62,9 @@ class ticketing extends StatelessWidget {
                 Text("Easy QR Code based ticketing system for events, that creates the invited based on a guest list.",style: project_text),
                 InkWell(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>ticketng_advanced()));
+                    Navigator.push(context, Transition(child: ticketng_advanced(),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
+
+                    //Navigator.push(context, MaterialPageRoute(builder: (context)=>ticketng_advanced()));
                   },
                   child: Text("link to more details",
                       style: GoogleFonts.cutive(
@@ -285,7 +290,7 @@ class dataset_creator extends StatelessWidget {
         Text("Create Image Bases Datasets on your phone.\nMade for highly specific use cases. The finished Dataset can then be loaded directly into pytorch",style: project_text,),
         InkWell(
           onTap: (){
-
+            Navigator.push(context, Transition(child: dataset_creator_advanced(),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
           },
           child: Text("link to more details",
               style: GoogleFonts.cutive(
@@ -321,7 +326,7 @@ class ai_school_project extends StatelessWidget {
         Text("An Ai Art Projects that allows you to upload a selfie and be in a historic artwork with other users",style: project_text,),
         InkWell(
           onTap: (){
-
+              Navigator.push(context, Transition(child: ai_project_advanced(),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
           },
           child: Text("link to more details",
               style: GoogleFonts.cutive(

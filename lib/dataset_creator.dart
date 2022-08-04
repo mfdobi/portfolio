@@ -1,37 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'utilities.dart';
 import 'package:transition/transition.dart';
 import 'main.dart';
 import 'get_in_touch.dart';
-import 'projects.dart';
-import 'package:youtube_player_iframe/youtube_player_iframe.dart';
+import 'big_picture.dart';
 
-
-class ticketng_advanced extends StatefulWidget {
+class dataset_creator_advanced extends StatefulWidget {
   @override
-  _ticketng_advancedState createState() => _ticketng_advancedState();
+  _dataset_creator_advancedState createState() => _dataset_creator_advancedState();
 }
 
-class _ticketng_advancedState extends State<ticketng_advanced> {
-  late YoutubePlayerController _controller;
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-     _controller = YoutubePlayerController(
-      initialVideoId: '9-oLfAuzHnk',
-      params: YoutubePlayerParams(
-        //playlist: ['nPt8bK2gbaU', 'gQDByCdjUXw'], // Defining custom playlist
-        //startAt: Duration(seconds: 30),
-        showControls: true,
-        showFullscreenButton: true,
-      ),
-    );
-     
-     _controller.setSize(Size(200, 200));
-  }
+class _dataset_creator_advancedState extends State<dataset_creator_advanced> {
 
   @override
   Widget build(BuildContext context) {
@@ -42,13 +22,13 @@ class _ticketng_advancedState extends State<ticketng_advanced> {
         elevation: 0,
         leading: IconButton(
           icon: Text(
-            "<",
-            style: GoogleFonts.cutive(
-                textStyle: TextStyle(
-                    color: Colors.black,
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold
-                )),),
+              "<",
+              style: GoogleFonts.cutive(
+                  textStyle: TextStyle(
+                      color: Colors.black,
+                      fontSize: 32,
+                      fontWeight: FontWeight.bold))),
+
           onPressed: (){
             Navigator.push(context, Transition(child: MyHomePage(),transitionEffect: TransitionEffect.FADE ));
           },),
@@ -62,7 +42,7 @@ class _ticketng_advancedState extends State<ticketng_advanced> {
           Padding(
             padding: const EdgeInsets.only(top: 25,bottom: 20,left: 25),
             child: Text(
-                "Ticketing System",
+                "Dataset_creator",
                 style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 32))),
           ),
           Container(
@@ -73,30 +53,63 @@ class _ticketng_advancedState extends State<ticketng_advanced> {
                     top: BorderSide(width: 3,color: Colors.black),
                     bottom: BorderSide(width: 3,color: Colors.black))
             ),
-            child: Text("This is a simply Ticketing system for small events. "
-                "It generates Qr Codes from a guest list and then scans them to check if they are valid."
-                "\nIt can check, if the code is valid,invalid or is valid, but already scanned.",
+            child: Text("I got a bit into AI(Object Recognition) and Pytorch in 2020 and "
+                "wanted to build some specific Classifiers fot gesture recognition using custom gestures."
+                "\nThis meant, that I had to build a Dataset by making photos of the gestures in different situations. "
+                "To make it a lot easier for me I decided to make an App for that, that takes the Photos and then puts them in a Folder structure Pytorch can read automatically.",
               style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 16,color: Colors.black)) ,),
           ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 20,top: 20),
-            child: Center(child: Text("Video",style: table_text_styling1,)),
-          ),
-          Row(
-            children: [
-              Spacer(),
-              ConstrainedBox(
-                constraints: BoxConstraints(
-                  maxHeight: 300,maxWidth: 300
+          
+          Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Flexible(
+                  flex: 1,
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, Transition(child: big_view(Image: ["1.jpg","2.jpg","3.jpg"]),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
+                    },
+                    child: Container(
+                      width: 200,
+                      height: 200,
+                      padding: EdgeInsets.only(top: 25),
+                      child: Image.asset("1.jpg"),
+                    ),
+                  ),
                 ),
-                child: YoutubePlayerIFrame(
-                  controller: _controller,
-                  //aspectRatio: 16 / 9,
+                Flexible(
+                  flex: 1,
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, Transition(child: big_view(Image: ["1.jpg","2.jpg","3.jpg"]),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
+
+                    },
+                    child: Container(
+                      width: 200,
+                      height: 200,
+                      padding: EdgeInsets.only(top: 25),
+                      child: Image.asset("2.jpg"),
+                    ),
+                  ),
                 ),
-              ),
-              Spacer()
-            ]
+                Flexible(
+                  flex: 1,
+                  child: InkWell(
+                    onTap: (){
+                      Navigator.push(context, Transition(child: big_view(Image: ["1.jpg","2.jpg","3.jpg"]),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
+                    },
+                    child: Container(
+                      width: 200,
+                      height: 200,
+                      padding: EdgeInsets.only(top: 25),
+                      child: Image.asset("3.jpg"),
+                    ),
+                  ),
+                ),
+              ],),
           ),
+
           Padding(
             padding: const EdgeInsets.only(top: 25),
             child: Center(
@@ -164,11 +177,11 @@ class project_tech_stack extends StatelessWidget {
           builder: (context,constraints){
             if(constraints.maxWidth>650){
               return Row(
-                children: widget_list
+                  children: widget_list
               );
             }else{
               return Column(
-                children: widget_list2
+                  children: widget_list2
               );
             }
           }),
@@ -185,10 +198,8 @@ class backend extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("Backend",style: table_text_styling1,),
-        Text("-Consists of Django,Django-rest-framework and Django ORM",style: project_text,),
-        Text("-Checks if QR Code Data is valid by"
-            " comparing it with the Database Entries and returns result as Json",style: project_text,),
+        Text("Tools",style: table_text_styling1,),
+        Text("-Python Script to divide the Dataset into a training & validation Set based on Parameters like: percentage and randomness",style: project_text,),
         Container(
           height: 200,
         )
@@ -208,9 +219,7 @@ class mobile_app extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Text("Mobile App",style: table_text_styling1,),
-        Text("-Flutter to build the client, "
-            "that scans the codes and sends the data to the backend for validation."
-            " The app then displays the result.",
+        Text("-Flutter App that uses the Camera and inbuilt storage APIs",
           style: project_text,),
         Container(
           height: 200,
