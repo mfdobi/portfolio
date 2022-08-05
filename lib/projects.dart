@@ -6,7 +6,8 @@ import 'utilities.dart';
 import 'ticketing_view.dart';
 import 'Ai_project.dart';
 import 'dataset_creator.dart';
-
+import 'substitute.dart';
+import 'about_this_page.dart';
 
 class projects extends StatelessWidget {
   const projects({
@@ -26,6 +27,8 @@ class projects extends StatelessWidget {
         cross_row(),
 
         substitude(),
+
+        about_this_page()
       ],
     );
   }
@@ -131,7 +134,7 @@ class substitude extends StatelessWidget {
                 Text("A simple, lightweight and fast viewer for my shools substitude table, that automatically loggs you in and selects your course/year.",style: project_text,),
                 InkWell(
                   onTap: (){
-
+                    Navigator.push(context, Transition(child: substitute_viewer_advanced(),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
                   },
                   child: Text("link to more details",
                       style: GoogleFonts.cutive(
@@ -217,8 +220,7 @@ class cross_row extends StatelessWidget {
 
     var widget_list1 = [
       Flexible(
-
-          child: ai_school_project()
+        child: ai_school_project(),
       ),
       Container(
         width: 3,
@@ -346,5 +348,46 @@ class ai_school_project extends StatelessWidget {
         )
       ],
     );
+  }
+}
+
+class about_this_page extends StatelessWidget {
+  const about_this_page({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 250,
+      padding: EdgeInsets.only(top: 25,left: 5,right: 5),
+      margin: EdgeInsets.only(left: 25,right: 25,bottom: 25),
+      decoration: BoxDecoration(
+          border: Border(
+              //top: BorderSide(width: 0,color: Colors.black),
+              bottom: BorderSide(width: 3,color: Colors.black))
+      ),
+      child: Row(
+        children: [
+          Flexible(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text("About this page",style: table_text_styling1,),
+                Text("learn more about the design, tech and the why",style: project_text,),
+                InkWell(
+                  onTap: (){
+                    Navigator.push(context, Transition(child: about_this_page_advanced(),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
+                  },
+                  child: Text("link to more details",
+                      style: GoogleFonts.cutive(
+                          fontSize: 12,
+                          color: Colors.black,
+                          decoration: TextDecoration.underline)),
+                ),
+              ],),
+          )
+        ],
+      ),);
   }
 }

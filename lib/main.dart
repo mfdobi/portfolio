@@ -45,6 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        automaticallyImplyLeading: false,
         title: Text("Marc",
             style: GoogleFonts.cutive(
                 textStyle: TextStyle(
