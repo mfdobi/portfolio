@@ -43,7 +43,7 @@ class _about_this_page_advancedState extends State<about_this_page_advanced> {
             padding: const EdgeInsets.only(top: 25,bottom: 20,left: 25),
             child: Text(
                 "About this page",
-                style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 32))),
+                style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 32,decoration: TextDecoration.underline))),
           ),
           Container(
             padding: EdgeInsets.only(top: 25,left: 5,right: 5),
@@ -55,6 +55,9 @@ class _about_this_page_advancedState extends State<about_this_page_advanced> {
             ),
             child: Text("Learn more about this page",
               style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 16,color: Colors.black)) ,),
+          ),
+          SizedBox(
+            height: 50,
           ),
 
           Padding(
@@ -79,15 +82,8 @@ class _about_this_page_advancedState extends State<about_this_page_advanced> {
                 " and also interactive to show some of my front-end skills.",
               style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 16,color: Colors.black)) ,),
           ),
-
-          Center(
-            child: Container(
-              padding: EdgeInsets.only(top: 25),
-              width: 250,
-              child: Image.asset(
-                  "4.jpg"
-              ),
-            ),
+          SizedBox(
+            height: 50,
           ),
 
           Padding(
@@ -98,6 +94,10 @@ class _about_this_page_advancedState extends State<about_this_page_advanced> {
             ),
           ),
           project_tech_stack(),
+
+          SizedBox(
+            height: 50,
+          ),
 
           get_in_touch()
         ],
@@ -178,10 +178,10 @@ class backend extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("Development",style: table_text_styling1,),
-        Text("-Analyzing Website",style: project_text,),
-        Text("-Deciding between displaying the Website in the webview or scraping it for the relevant Data",style: project_text,),
-        Text("-Deciding between a sqlite Db or inbuild shared_preferences for storage.",style: project_text,),
+        Text("Hosting",style: table_text_styling1,),
+        Text("-Github-pages ",style: project_text,),
+        //Text("-Deciding between displaying the Website in the webview or scraping it for the relevant Data",style: project_text,),
+        //Text("-Deciding between a sqlite Db or inbuild shared_preferences for storage.",style: project_text,),
         Container(
           height: 200,
         )
@@ -200,10 +200,10 @@ class mobile_app extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text("Mobile App",style: table_text_styling1,),
-        Text("-Flutter App that uses inbuilt Android/Ios WebView to display the important parts of the original website",
+        Text("Frontend",style: table_text_styling1,),
+        Text("-Flutter for Web",
           style: project_text,),
-        Text("-Inbuilt libraries to get the date/calculate the week and store User Data(courses and login Date)",
+        Text("-Libraries like: Google Fonts,url_launcher,youtube-player",
           style: project_text,),
         Container(
           height: 200,

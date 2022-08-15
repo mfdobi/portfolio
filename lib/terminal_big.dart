@@ -25,7 +25,7 @@ class _terminal_big_State extends State<terminal_big_> {
                   padding: const EdgeInsets.only(right: 5,bottom: 5,top: 5),
                   child: InkWell(
                     onTap: (){
-                      Navigator.push(context, Transition(child: MyHomePage(),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
+                      Navigator.push(context, Transition(child: MyHomePage(),transitionEffect: TransitionEffect.TOP_TO_BOTTOM));
                     },
                     child: Container(
                       width: 25,
