@@ -14,6 +14,10 @@ class desktop_layout extends StatelessWidget {
   const desktop_layout({
     Key? key,
   }) : super(key: key);
+  
+  void_scroll(){
+    Scrollable.ensureVisible(project.c)
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +53,7 @@ class desktop_layout extends StatelessWidget {
 
         Skills(),
 
-        Padding(
+        Padding(key: project,
           padding: const EdgeInsets.only(top: 25,bottom: 20,left: 25,right: 25),
           child: Text("MY PROJECTS",style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 32)),),
         ),

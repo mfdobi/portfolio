@@ -3,6 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'utilities.dart';
 import 'ticketing_view.dart';
+import 'get_in_touch.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'desktop_layout.dart';
 
 
 
@@ -135,32 +138,26 @@ class default_phon extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             //Spacer(),
-            InkWell(
-              onTap: (){},
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Image.asset("ig_icon.png",width: size,height: 40,),
-              ),
-            ),
+            app_icon(size: size,
+              link: "https://www.instagram.com/mfdobi",
+              Qr_code: "Instagram.png",
+              icon: "ig_icon.png",),
+            //Spacer(),
+            app_icon(size: size,
+                Qr_code: "linkedin.png" ,
+                link: "https://www.linkedin.com/in/marc-dobner",
+                icon: "li_icon.png"),
+
+            app_icon(size: size,
+                Qr_code: "twitter.png",
+                link: "https://www.twitter.com/mfdobner",
+                icon: "tw_icon.png"),
+            //Spacer(),
+
             //Spacer(),
             InkWell(
-              onTap: (){},
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Image.asset("li_icon.png",width: 40,height: 40,),
-              ),
-            ),
-            //Spacer(),
-            InkWell(
-              onTap: (){},
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Image.asset("tw_icon.png",width: 40,height: 40,),
-              ),
-            ),
-            //Spacer(),
-            InkWell(
-              onTap: (){},
+              onTap: (){
+              },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
                 child: Image.asset("gallery.png",width: 40,height: 40,),
@@ -176,6 +173,47 @@ class default_phon extends StatelessWidget {
           maxLines: 10,
           style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 12)),)
         */
+    );
+  }
+}
+
+class app_icon extends StatelessWidget {
+  final String Qr_code;
+  final String link;
+  final String icon;
+  const app_icon({
+    Key? key,
+    required this.size,
+    required this.Qr_code,
+    required this.link,
+    required this.icon,
+  }) : super(key: key);
+
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: ()async{
+        print("ig");
+        showDialog(
+            context: context,
+            builder: (context){
+              return AlertDialog(
+                title: Center(child: Text("open on your phone",style: table_text_styling1,)),
+                content: Container(
+                  child: Image.asset(Qr_code),
+                ),
+                backgroundColor: Color.fromRGBO(238, 235, 224, 1),
+              );
+            });
+        await Future.delayed(Duration(seconds: 3));
+        launch(link);
+      },
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(15),
+        child: Image.asset(icon,width: size,height: 40,),
+      ),
     );
   }
 }
