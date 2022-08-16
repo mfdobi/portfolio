@@ -17,11 +17,15 @@ class vertical_phone extends StatefulWidget {
 
 class _vertical_phoneState extends State<vertical_phone> {
   var default_screen;
+  var default_color;
+  var default_state = 1;
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     default_screen = default_phone();
+    default_color = BoxDecoration(color: Colors.white60);
+
   }
 
   @override
@@ -41,7 +45,8 @@ class _vertical_phoneState extends State<vertical_phone> {
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(33),topRight: Radius.circular(33)),
                     color: Colors.black),)),
           Container(
-            color: Colors.white60,
+            //color: Colors.white60,
+            decoration: default_color,
             height: 350,
             padding: EdgeInsets.all(20),
             child: Stack(
@@ -64,9 +69,20 @@ class _vertical_phoneState extends State<vertical_phone> {
                   InkWell(
                     onTap: (){
                       print("hfjsf");
-                      setState(() {
-                        default_screen = default_phon();
-                      });
+                      default_state = default_state + 1;
+                      print(default_state);
+                      if (default_state.isEven){
+                        setState(() {
+                          default_screen = default_phon();
+                          default_color = BoxDecoration(color: Colors.white60,image: DecorationImage(image: AssetImage("phone_background.jpg"),fit: BoxFit.fill));
+                        });
+                      }else{
+                        setState(() {
+                          default_screen = default_phone();
+                          default_color = BoxDecoration(color: Colors.white60);
+                        });
+                      }
+
                       },
                     child: Container(
                       width: 31,
