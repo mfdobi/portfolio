@@ -122,7 +122,7 @@ class substitude extends StatelessWidget {
               BoxDecoration(
                   image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage("4.jpg"))),
+                      image: AssetImage("assets/4.jpg"))),
             ),
           ),
 
@@ -308,7 +308,7 @@ class dataset_creator extends StatelessWidget {
           BoxDecoration(
               image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage("2.jpg"))),
+                  image: AssetImage("assets/2.jpg"))),
         )
       ],
     );
@@ -344,7 +344,7 @@ class ai_school_project extends StatelessWidget {
           BoxDecoration(
               image: DecorationImage(
                   fit: BoxFit.cover,
-                  image: AssetImage("latest.png"))),
+                  image: AssetImage("assets/latest.png"))),
         )
       ],
     );
