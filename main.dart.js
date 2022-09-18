@@ -56079,7 +56079,7 @@ K.cE(this.a,!1).cl(s)},
 $S:0}
 N.N6.prototype={
 D:function(a,b){var s=null,r=t.p
-return M.ab(s,T.db(H.a([new T.bZ(1,C.S,M.ab(s,s,s,new S.aR(s,X.rh(C.bK,new L.f9("4.jpg",s,s)),s,s,s,s,C.u),s,200,new V.N(15,15,15,15),s,200),s),new T.bZ(1,C.S,T.bm(H.a([L.M("Schedule Viewer",s,s,$.bX(),s,s),L.M("A simple, lightweight and fast viewer for my shools substitude table, that automatically loggs you in and selects your course/year.",s,s,$.dC(),s,s),R.dr(!1,!0,L.M("link to more details",s,s,B.aK(C.i,C.bh,12,s),s,s),s,!0,s,s,s,s,s,s,s,s,s,new N.a7y(b),s)],r),C.bo,C.p,C.m),s)],r),C.r,C.p,C.m),s,new S.aR(s,s,new F.bc(new Y.aF(C.i,0,C.o),C.l,new Y.aF(C.i,3,C.o),C.l),s,s,s,C.u),s,250,new V.N(25,0,25,25),new V.N(5,25,5,0),s)}}
+return M.ab(s,T.db(H.a([new T.bZ(1,C.S,M.ab(s,s,s,new S.aR(s,X.rh(C.bK,new L.f9("assets/4.jpg",s,s)),s,s,s,s,C.u),s,200,new V.N(15,15,15,15),s,200),s),new T.bZ(1,C.S,T.bm(H.a([L.M("Schedule Viewer",s,s,$.bX(),s,s),L.M("A simple, lightweight and fast viewer for my shools substitude table, that automatically loggs you in and selects your course/year.",s,s,$.dC(),s,s),R.dr(!1,!0,L.M("link to more details",s,s,B.aK(C.i,C.bh,12,s),s,s),s,!0,s,s,s,s,s,s,s,s,s,new N.a7y(b),s)],r),C.bo,C.p,C.m),s)],r),C.r,C.p,C.m),s,new S.aR(s,s,new F.bc(new Y.aF(C.i,0,C.o),C.l,new Y.aF(C.i,3,C.o),C.l),s,s,s,C.u),s,250,new V.N(25,0,25,25),new V.N(5,25,5,0),s)}}
 N.a7y.prototype={
 $0:function(){var s=M.dw(new Z.z_(null),C.aB)
 K.cE(this.a,!1).cl(s)},
@@ -56100,14 +56100,14 @@ else return M.ab(s,T.bm(this.b,C.r,C.p,C.m),s,s,s,s,new V.N(0,0,0,25),s,s)},
 $S:359}
 N.yM.prototype={
 D:function(a,b){var s=null
-return T.bm(H.a([L.M("Dataset-creator",s,s,$.bX(),s,s),L.M("Create Image Bases Datasets on your phone.\nMade for highly specific use cases. The finished Dataset can then be loaded directly into pytorch",s,s,$.dC(),s,s),R.dr(!1,!0,L.M("link to more details",s,s,B.aK(C.i,C.bh,12,s),s,s),s,!0,s,s,s,s,s,s,s,s,s,new N.a6Q(b),s),M.ab(s,s,s,new S.aR(s,X.rh(C.bK,new L.f9("2.jpg",s,s)),s,s,s,s,C.u),s,200,s,s,200)],t.p),C.r,C.p,C.m)}}
+return T.bm(H.a([L.M("Dataset-creator",s,s,$.bX(),s,s),L.M("Create Image Bases Datasets on your phone.\nMade for highly specific use cases. The finished Dataset can then be loaded directly into pytorch",s,s,$.dC(),s,s),R.dr(!1,!0,L.M("link to more details",s,s,B.aK(C.i,C.bh,12,s),s,s),s,!0,s,s,s,s,s,s,s,s,s,new N.a6Q(b),s),M.ab(s,s,s,new S.aR(s,X.rh(C.bK,new L.f9("assets/2.jpg",s,s)),s,s,s,s,C.u),s,200,s,s,200)],t.p),C.r,C.p,C.m)}}
 N.a6Q.prototype={
 $0:function(){var s=M.dw(new L.yN(null),C.aB)
 K.cE(this.a,!1).cl(s)},
 $S:0}
 N.yF.prototype={
 D:function(a,b){var s=null
-return T.bm(H.a([L.M("AI Art School Project",s,s,$.bX(),s,s),L.M("An Ai Art Projects that allows you to upload a selfie and be in a historic artwork with other users",s,s,$.dC(),s,s),R.dr(!1,!0,L.M("link to more details",s,s,B.aK(C.i,C.bh,12,s),s,s),s,!0,s,s,s,s,s,s,s,s,s,new N.a6K(b),s),M.ab(s,s,s,new S.aR(s,X.rh(C.bK,new L.f9("latest.png",s,s)),s,s,s,s,C.u),s,200,new V.N(15,15,15,15),s,200)],t.p),C.r,C.p,C.m)}}
+return T.bm(H.a([L.M("AI Art School Project",s,s,$.bX(),s,s),L.M("An Ai Art Projects that allows you to upload a selfie and be in a historic artwork with other users",s,s,$.dC(),s,s),R.dr(!1,!0,L.M("link to more details",s,s,B.aK(C.i,C.bh,12,s),s,s),s,!0,s,s,s,s,s,s,s,s,s,new N.a6K(b),s),M.ab(s,s,s,new S.aR(s,X.rh(C.bK,new L.f9("assets/latest.png",s,s)),s,s,s,s,C.u),s,200,new V.N(15,15,15,15),s,200)],t.p),C.r,C.p,C.m)}}
 N.a6K.prototype={
 $0:function(){var s=M.dw(new R.yE(null),C.aB)
 K.cE(this.a,!1).cl(s)},
