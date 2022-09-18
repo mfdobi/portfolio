@@ -12,7 +12,11 @@ import 'desktop_layout.dart';
 class vertical_phone extends StatefulWidget {
   const vertical_phone({
     Key? key,
+    required  this.project,
   }) : super(key: key);
+
+  final GlobalKey<State<StatefulWidget>> project;
+
 
   @override
   _vertical_phoneState createState() => _vertical_phoneState();
@@ -71,12 +75,12 @@ class _vertical_phoneState extends State<vertical_phone> {
                   Spacer(),
                   InkWell(
                     onTap: (){
-                      print("hfjsf");
+                      //print("hfjsf");
                       default_state = default_state + 1;
-                      print(default_state);
+                      //print(default_state);
                       if (default_state.isEven){
                         setState(() {
-                          default_screen = default_phon();
+                          default_screen = default_phon(project: widget.project,);
                           default_color = BoxDecoration(color: Colors.white60,image: DecorationImage(image: AssetImage("phone_background.jpg"),fit: BoxFit.fill));
                         });
                       }else{
@@ -104,6 +108,12 @@ class _vertical_phoneState extends State<vertical_phone> {
       ),
     );
   }
+
+  test(){
+    print("test");
+    var b = "Ballal";
+    return b;
+  }
 }
 
 class default_phone extends StatelessWidget {
@@ -127,7 +137,11 @@ class default_phone extends StatelessWidget {
 class default_phon extends StatelessWidget {
   const default_phon({
     Key? key,
+    required this.project
   }) : super(key: key);
+
+  final GlobalKey<State<StatefulWidget>> project;
+
 
   @override
   Widget build(BuildContext context) {
@@ -157,6 +171,9 @@ class default_phon extends StatelessWidget {
             //Spacer(),
             InkWell(
               onTap: (){
+                print("jump to section");
+                helper().void_scroll(project);
+
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
@@ -195,7 +212,7 @@ class app_icon extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: ()async{
-        print("ig");
+        //print("ig");
         showDialog(
             context: context,
             builder: (context){

@@ -11,10 +11,18 @@ import 'terminal.dart';
 import 'projects.dart';
 
 
-class mobile_layout extends StatelessWidget {
+class mobile_layout extends StatefulWidget {
   const mobile_layout({
     Key? key,
   }) : super(key: key);
+
+  @override
+  _mobile_layoutState createState() => _mobile_layoutState();
+}
+
+class _mobile_layoutState extends State<mobile_layout> {
+
+  final project = GlobalKey();
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +31,7 @@ class mobile_layout extends StatelessWidget {
         //horizontal_phone(),
 
        UnconstrainedBox(
-         child: vertical_phone(),
+         child: vertical_phone(project: project,),
        ),
         SizedBox(
           height: 25,
@@ -37,6 +45,7 @@ class mobile_layout extends StatelessWidget {
         Skills(),
 
         Padding(
+          key: project,
           padding: const EdgeInsets.only(top: 25,bottom: 20,left: 25,right: 25),
           child: Text("MY PROJECTS",style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 32)),),
         ),
