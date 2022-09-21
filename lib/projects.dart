@@ -87,7 +87,7 @@ class ticketing extends StatelessWidget {
               BoxDecoration(
                   image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage("5.jpg"))),
+                      image: AssetImage("assets/5.jpg"))),
             ),
           )
         ],
@@ -178,7 +178,7 @@ class Abode extends StatelessWidget {
               BoxDecoration(
                   image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: AssetImage("AppIcon.png"))),
+                      image: AssetImage("assets/AppIcon.png"))),
             ),
           ),
           Flexible(

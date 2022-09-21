@@ -64,49 +64,13 @@ class _dataset_creator_advancedState extends State<dataset_creator_advanced> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Flexible(
-                  flex: 1,
-                  child: InkWell(
-                    onTap: (){
-                      Navigator.push(context, Transition(child: big_view(Image: ["1.jpg","2.jpg","3.jpg"]),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
-                    },
-                    child: Container(
-                      width: 200,
-                      height: 200,
-                      padding: EdgeInsets.only(top: 25),
-                      child: Image.asset("1.jpg"),
-                    ),
-                  ),
-                ),
-                Flexible(
-                  flex: 1,
-                  child: InkWell(
-                    onTap: (){
-                      Navigator.push(context, Transition(child: big_view(Image: ["1.jpg","2.jpg","3.jpg"]),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
 
-                    },
-                    child: Container(
-                      width: 200,
-                      height: 200,
-                      padding: EdgeInsets.only(top: 25),
-                      child: Image.asset("2.jpg"),
-                    ),
-                  ),
-                ),
-                Flexible(
-                  flex: 1,
-                  child: InkWell(
-                    onTap: (){
-                      Navigator.push(context, Transition(child: big_view(Image: ["1.jpg","2.jpg","3.jpg"]),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
-                    },
-                    child: Container(
-                      width: 200,
-                      height: 200,
-                      padding: EdgeInsets.only(top: 25),
-                      child: Image.asset("3.jpg"),
-                    ),
-                  ),
-                ),
+                Image_to_big(image: "assets/1.jpg",),
+
+                Image_to_big(image: "assets/2.jpg"),
+
+                Image_to_big(image: "assets/3.jpg"),
+
               ],),
           ),
 
@@ -121,6 +85,32 @@ class _dataset_creator_advancedState extends State<dataset_creator_advanced> {
 
           get_in_touch()
         ],
+      ),
+    );
+  }
+}
+
+class Image_to_big extends StatelessWidget {
+  final String image;
+  const Image_to_big({
+    required this.image,
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Flexible(
+      flex: 1,
+      child: InkWell(
+        onTap: (){
+          Navigator.push(context, Transition(child: big_view(Image: ["assets/1.jpg","assets/2.jpg","assets/3.jpg"]),transitionEffect: TransitionEffect.BOTTOM_TO_TOP));
+        },
+        child: Container(
+          width: 200,
+          height: 200,
+          padding: EdgeInsets.only(top: 25),
+          child: Image.asset(image),
+        ),
       ),
     );
   }

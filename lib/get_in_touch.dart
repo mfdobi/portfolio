@@ -19,23 +19,11 @@ class get_in_touch extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
 
-              Social_inkwell(title: "Twitter", link: "https://www.twitter.com/mfdobner", image: "twitter.png"),
-              /*
-              InkWell(
-                onTap: (){
-                  launch("https://www.twitter.com/mfdobner");
-                },
-                child:
-                Container(
-                  width: 100,
-                  height: 25,
-                  color: Colors.black,
-                  child: Center(child: Text("Twitter",style: GoogleFonts.cutive(textStyle: TextStyle(color: Colors.white)),)),),
-              ),*/
-              Social_inkwell(title: "Instagram", link: "https://www.instagram.com/mfdobi", image: "Instagram.png"),
+              Social_inkwell(title: "Twitter", link: "https://www.twitter.com/mfdobner", image: "assets/twitter.png"),
 
+              Social_inkwell(title: "Instagram", link: "https://www.instagram.com/mfdobi", image: "assets/Instagram.png"),
 
-              Social_inkwell(title: "LinkedIn",link: "https://www.linkedin.com/in/marc-dobner",image: "linkedin.png",),
+              Social_inkwell(title: "LinkedIn",link: "https://www.linkedin.com/in/marc-dobner",image: "assets/linkedin.png",),
             ],
           ),
         ),

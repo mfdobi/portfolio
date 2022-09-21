@@ -63,7 +63,7 @@ class _substitute_viewer_advancedState extends State<substitute_viewer_advanced>
               padding: EdgeInsets.only(top: 25),
               width: 250,
               child: Image.asset(
-                "4.jpg"
+                "assets/4.jpg"
               ),
             ),
           ),

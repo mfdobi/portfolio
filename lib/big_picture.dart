@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/dataset_creator.dart';
 import 'utilities.dart';
 import 'package:transition/transition.dart';
 import 'main.dart';
@@ -35,7 +36,7 @@ class _big_viewState extends State<big_view> {
                       fontWeight: FontWeight.bold))),
 
           onPressed: (){
-            Navigator.push(context, Transition(child: MyHomePage(),transitionEffect: TransitionEffect.FADE ));
+            Navigator.push(context, Transition(child: dataset_creator_advanced(),transitionEffect: TransitionEffect.FADE ));
           },),
         title: Text("Marc",
         style: GoogleFonts.cutive(

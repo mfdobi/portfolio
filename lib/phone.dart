@@ -81,7 +81,7 @@ class _vertical_phoneState extends State<vertical_phone> {
                       if (default_state.isEven){
                         setState(() {
                           default_screen = default_phon(project: widget.project,);
-                          default_color = BoxDecoration(color: Colors.white60,image: DecorationImage(image: AssetImage("phone_background.jpg"),fit: BoxFit.fill));
+                          default_color = BoxDecoration(color: Colors.white60,image: DecorationImage(image: AssetImage("assets/phone_background.jpg"),fit: BoxFit.fill));
                         });
                       }else{
                         setState(() {
@@ -154,18 +154,18 @@ class default_phon extends StatelessWidget {
             //Spacer(),
             app_icon(size: size,
               link: "https://www.instagram.com/mfdobi",
-              Qr_code: "Instagram.png",
-              icon: "ig_icon.png",),
+              Qr_code: "assets/Instagram.png",
+              icon: "assets/ig_icon.png",),
             //Spacer(),
             app_icon(size: size,
-                Qr_code: "linkedin.png" ,
+                Qr_code: "assets/linkedin.png" ,
                 link: "https://www.linkedin.com/in/marc-dobner",
-                icon: "li_icon.png"),
+                icon: "assets/li_icon.png"),
 
             app_icon(size: size,
-                Qr_code: "twitter.png",
+                Qr_code: "assets/twitter.png",
                 link: "https://www.twitter.com/mfdobner",
-                icon: "tw_icon.png"),
+                icon: "assets/tw_icon.png"),
             //Spacer(),
 
             //Spacer(),
@@ -177,7 +177,7 @@ class default_phon extends StatelessWidget {
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(15),
-                child: Image.asset("gallery.png",width: 40,height: 40,),
+                child: Image.asset("assets/gallery.png",width: 40,height: 40,),
               ),
             ),
             //Spacer()

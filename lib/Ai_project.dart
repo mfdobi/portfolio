@@ -67,7 +67,7 @@ class _ai_project_advancedState extends State<ai_project_advanced> {
             width: 200,
             height: 200,
             padding: EdgeInsets.only(top: 25),
-            child: Image.asset("balkonmanet_detected.jpg"),
+            child: Image.asset("assets/balkonmanet_detected.jpg"),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 25),
