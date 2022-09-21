@@ -125,13 +125,11 @@ class default_phone extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
         width: 180,
-        child: Expanded(
-          child: Text("Hi,\nI'm Marc,19 Years old from Germany and code.\n\n"
-              "I make Apps, Websites and other cool stuff with Tools like Python,Django or Flutter.",
-            overflow: TextOverflow.ellipsis,
-            maxLines: 10,
-            style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 12)),),
-        )
+        child: Text("Hi,\nI'm Marc,19 Years old from Germany and code.\n\n"
+            "I make Apps, Websites and other cool stuff with Tools like Python,Django or Flutter.",
+          //overflow: TextOverflow.ellipsis,
+          maxLines: 10,
+          style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 12)),)
     );
   }
 }
