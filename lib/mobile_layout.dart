@@ -41,7 +41,8 @@ class _mobile_layoutState extends State<mobile_layout> {
         SizedBox(height: 50,),
 
         Center(
-            child: Padding(
+            child: Container(
+              margin: EdgeInsets.only(top: 10),
               padding: EdgeInsets.only(top: 5),
               child: Text("SKILLS",
                 style: GoogleFonts.cutive(
@@ -53,7 +54,9 @@ class _mobile_layoutState extends State<mobile_layout> {
         Padding(
           key: project,
           padding: const EdgeInsets.only(top: 25,bottom: 20,left: 25,right: 25),
-          child: Text("MY PROJECTS",style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 32)),),
+          child: Container(
+            margin: EdgeInsets.only(top: 8),
+              child: Text("MY PROJECTS",style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 32)),)),
         ),
         Padding(
           padding: const EdgeInsets.only(bottom: 20,left: 25,right: 25),

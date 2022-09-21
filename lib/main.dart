@@ -46,7 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         automaticallyImplyLeading: false,
-        title: Padding(
+        title: Container(
+          margin: EdgeInsets.only(top: 5),
           padding: EdgeInsets.only(top: 5),
           child: Text("Marc",
               style: GoogleFonts.cutive(
