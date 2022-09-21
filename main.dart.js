@@ -56033,7 +56033,7 @@ r.e=new S.aR(C.df,s,s,s,s,s,C.u)},
 $S:0}
 E.yP.prototype={
 D:function(a,b){var s=null
-return T.dt(L.N("Hi,\nI'm Marc,19 Years old from Germany and code.\n\nI make Apps, Websites and other cool stuff with Tools like Python,Django or Flutter.",10,C.bC,B.aK(s,s,s,A.aW(s,s,s,s,s,s,s,s,s,s,s,12,s,s,s,s,!0,s,s,s,s,s,s,s)),s,s),350,180)}}
+return T.dt(L.N("Hi,\nI'm Marc,19 Years old from Germany and codeeeee.\n\nI make Apps, Websites and other cool stuff with Tools like Python,Django or Flutter.",10,C.bC,B.aK(s,s,s,A.aW(s,s,s,s,s,s,s,s,s,s,s,12,s,s,s,s,!0,s,s,s,s,s,s,s)),s,s),350,180)}}
 E.MS.prototype={
 D:function(a,b){var s=null
 return T.dt(T.db(H.a([new E.ql("assets/Instagram.png","https://www.instagram.com/mfdobi","assets/ig_icon.png",40,s),new E.ql("assets/linkedin.png","https://www.linkedin.com/in/marc-dobner","assets/li_icon.png",40,s),new E.ql("assets/twitter.png","https://www.twitter.com/mfdobner","assets/tw_icon.png",40,s),R.e_(!1,!0,T.acn(K.qQ(15),U.jD("assets/gallery.png",40,40)),s,!0,s,s,s,s,s,s,s,s,s,new E.a6R(this),s)],t.p),C.r,C.jc,C.m),s,180)}}
