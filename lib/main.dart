@@ -46,10 +46,13 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         automaticallyImplyLeading: false,
-        title: Text("Marc",
-            style: GoogleFonts.cutive(
-                textStyle: TextStyle(
-                    color: Colors.black,fontWeight: FontWeight.bold,fontSize: 32))),
+        title: Padding(
+          padding: EdgeInsets.only(top: 5),
+          child: Text("Marc",
+              style: GoogleFonts.cutive(
+                  textStyle: TextStyle(
+                      color: Colors.black,fontWeight: FontWeight.bold,fontSize: 32))),
+        ),
       ),
        body: LayoutBuilder(
          builder: (context, constraints){

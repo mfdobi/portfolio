@@ -40,7 +40,13 @@ class _mobile_layoutState extends State<mobile_layout> {
         terminal(),
         SizedBox(height: 50,),
 
-        Center(child: Text("SKILLS",style: GoogleFonts.cutive(textStyle: TextStyle(fontSize: 32)),)),
+        Center(
+            child: Padding(
+              padding: EdgeInsets.only(top: 5),
+              child: Text("SKILLS",
+                style: GoogleFonts.cutive(
+                    textStyle: TextStyle(fontSize: 32)),),
+            )),
 
         Skills(),
 
