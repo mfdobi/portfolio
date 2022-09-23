@@ -41,9 +41,8 @@ class _mobile_layoutState extends State<mobile_layout> {
         SizedBox(height: 50,),
 
         Center(
-            child: Container(
-              margin: EdgeInsets.only(top: 10),
-              padding: EdgeInsets.only(top: 5),
+            child: FittedBox(
+              fit: BoxFit.scaleDown,
               child: Text("SKILLS",
                 style: GoogleFonts.cutive(
                     textStyle: TextStyle(fontSize: 32)),),

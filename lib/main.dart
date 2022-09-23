@@ -46,9 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         automaticallyImplyLeading: false,
-        title: Container(
-          margin: EdgeInsets.only(top: 8),
-          padding: EdgeInsets.only(top: 5),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
           child: Text("Marc",
               style: GoogleFonts.cutive(
                   textStyle: TextStyle(
